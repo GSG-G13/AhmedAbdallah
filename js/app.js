@@ -1,4 +1,3 @@
-// variables
 const homeLink = document.getElementById("home");
 const generallink = document.getElementById("genral");
 const businesslink = document.getElementById("business");
@@ -16,10 +15,8 @@ const newsQuery = document.getElementById("newsQuery");
 const newsType = document.getElementById("newsType");
 const newsdetails = document.querySelector(".banner-sub-content");
 
-// Array
 var newsDataArr = [];
 
-// apis 
 const API_KEY = "5d2aa004b1a14cfd9d1da535774b6cab";
 const  searchQ = "https://newsapi.org/v2/everything?q=";
 
@@ -37,16 +34,14 @@ window.onload = function() {
     }else{
      url = "https://newsapi.org/v2/top-headlines?country=us&page=1&category="+cat+"&apiKey="+API_KEY;
     }
-    console.log(cat)
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
         let response = JSON.parse(xhr.responseText);
         newsDataArr = response.articles;
-        console.log(newsDataArr)
         displayNews(headerTitle);
       }
     };
-    xhr.open("GET", url, true); // use the `url` variable here
+    xhr.open("GET", url, true); 
     xhr.send();
   }
   
@@ -89,10 +84,6 @@ function displayNews(h2) {
 
     newsdetails.innerHTML ='';
     
-    /*var newsHeader = document.createElement('h2');
-    newsHeader.innerHTML = h2;
-    
-    newsdetails.appendChild(newsHeader);*/
 
     newsType.innerText=h2;
 
@@ -126,7 +117,6 @@ function displayNews(h2) {
         link.setAttribute("href", news.url);
 
         link.innerHTML="Read more";
-        console.log(link)
 
         cardBody.appendChild(newsHeading);
         cardBody.appendChild(dateHeading);
