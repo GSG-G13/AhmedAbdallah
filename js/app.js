@@ -21,7 +21,7 @@ var newsDataArr = [];
 
 // apis 
 const API_KEY = "8309ecd71883471db0fc4a20fd3959d5";
-const  searchQ = "https://api.codetabs.com/v1/proxy/?quest=https://newsapi.org/v2/everything?q=";
+const  searchQ = "https://newsapi.org/v2/everything?q=";
 
 
 window.onload = function() {
@@ -35,7 +35,7 @@ window.onload = function() {
     if(cat == "search"){
      url = searchQ+encodeURIComponent(newsQuery.value)+"&apiKey="+API_KEY;
     }else{
-     url = "https://api.codetabs.com/v1/proxy/?quest=https://newsapi.org/v2/top-headlines?country=us&page=1&category="+cat+"&apiKey="+API_KEY;
+     url = "https://newsapi.org/v2/top-headlines?country=us&page=1&category="+cat+"&apiKey="+API_KEY;
     }
     console.log(cat)
     xhr.onreadystatechange = function() {

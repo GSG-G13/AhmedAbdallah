@@ -1,5 +1,8 @@
 // Here we created the Api request to METEO Weather API
-const url = 'https://api.codetabs.com/v1/proxy/?quest=https://api.codetabs.com/v1/proxy/?quest=https://api.open-meteo.com/v1/forecast?latitude=31.50&longitude=34.47&hourly=temperature_2m,rain,windspeed_10m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=auto';
+// Access-Control-Allow-Origin: https:AhmedMughessib.github.io;
+// Access-Control-Allow-Methods: GET, POST, PUT, DELETE;
+// Access-Control-Allow-Headers: Content-Type;
+const url = 'https://api.open-meteo.com/v1/forecast?latitude=31.50&longitude=34.47&hourly=temperature_2m,rain,windspeed_10m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=auto';
 const xhr = new XMLHttpRequest();
 const weatherCon = document.getElementById('weather')
 xhr.open('GEt',`${url}`)
