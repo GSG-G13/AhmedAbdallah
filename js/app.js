@@ -20,7 +20,7 @@ const newsdetails = document.querySelector(".banner-sub-content");
 var newsDataArr = [];
 
 // apis 
-const API_KEY = "8309ecd71883471db0fc4a20fd3959d5";
+const API_KEY = "5d2aa004b1a14cfd9d1da535774b6cab";
 const  searchQ = "https://newsapi.org/v2/everything?q=";
 
 
