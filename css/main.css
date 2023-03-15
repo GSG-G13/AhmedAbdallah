@@ -487,8 +487,16 @@ footer > p{
         height: 100%;
         background: transparent;
     }
-    input {
+    form{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #333;
+        color: #f3f3f3;
+    }
+    input, select, button {
         padding: .375rem .75rem;
         font-size: 1rem;
         font-weight: 400;
@@ -497,6 +505,7 @@ footer > p{
         background-color: #fff;
         border: 1px solid #ced4da;
         border-radius: .25rem;
+        margin: 10px;
     }
 
     .nav-bar nav ul{
