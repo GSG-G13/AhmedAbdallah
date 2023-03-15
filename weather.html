@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/style.css">
+    <!--remember to change the path of files and pics to absolute and not relaticve -->
+</head>
+<body>
+    <div id="weathSec">
+        <div id="mainWeth">
+            <div id="mainTempandunit"><div id="mainTemp"></div><div id="unit">&#8451</div></div>
+            <div id="cityDataTime">
+                <div id="cityName"></div>
+                <div id="mainDataTime"></div>
+            </div>
+            <div id="iconStatus">
+                <img src="/apiPics/sun-fill.png" id="mainImage">
+            </div>
+        </div>
+        <div id="detWeth">
+            <ul id="detWethItems">
+                <li class="element" ><div class="valueName">Max. Tempreture &#8451</div><div class="value" id="maxTemp"></div></li>
+                <li class="element" ><div class="valueName">Min. Tempreture</div><div class="value" id="minTemp"></div></li>
+                <li class="element" ><div class="valueName">Sunrise Time</div><div class="value" id="sunriseTime"></div></li>
+                <li class="element" ><div class="valueName">Sunset Time</div><div class="value" id="sunsetTime"></div></li>
+                <li class="element" ><div class="valueName">Wind Speed</div><div class="value" id="windSpeed"></div></li>
+                <li class="element" ><div class="valueName">Rain</div><div class="value" id="rain"></div></li>
+                
+            </ul>
+        </div>
+        <!--if possible, reapet for all days-->
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>

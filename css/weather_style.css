@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Work+Sans:wght@300&display=swap');
+*{
+    font-family: 'League Spartan', sans-serif;
+
+}
+#weathSec{
+    padding: 20px;
+    background-image: url('/images/weather_background.jpg');
+    color: aliceblue;
+}
+#mainWeth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+}
+#mainTempandunit{
+    position: relative;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#unit{
+    position: relative;
+    right: 10px;
+    bottom: 5px;
+}
+#mainImage{
+    position: relative;
+    right: 45px;
+    top: 10px;
+}
+#mainTemp{
+    font-size:xx-large;
+    font-weight: 800;
+    position: relative;
+    right: 15px;
+}
+#cityDataTime {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 20px;
+}
+#cityName{
+ position: relative;
+ 
+}   
+#weathSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#detWethItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.element{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+.value{
+    padding-left: 30px;
+    position: relative;
+    right: 25px;
+    font-weight: 600;
+}
+.valueName{
+    padding-right: 160px;
+    position: relative;
+    right: 25px;
+}
