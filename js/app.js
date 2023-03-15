@@ -121,10 +121,12 @@ function displayNews(h2) {
         var discription = document.createElement('p');
         discription.innerHTML = news.description;
 
-        var link = document.createElement('button');
+        var link = document.createElement('a');
         link.setAttribute("target", "_blank");
-        link.href = news.url;
+        link.setAttribute("href", news.url);
+
         link.innerHTML="Read more";
+        console.log(link)
 
         cardBody.appendChild(newsHeading);
         cardBody.appendChild(dateHeading);
