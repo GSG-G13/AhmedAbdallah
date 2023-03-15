@@ -134,12 +134,15 @@ hr{
     font-family: 'Montserrat', sans-serif;
     transition: background 1s ease;
 }
-.banner-sub-content button{
+.banner-sub-content a{
     border: none;
     color: #fff;
     background: #252525;
     padding:  10px;
     margin: 10px 0 10px 0;
+}
+.banner-sub-content p{
+    margin: 10px 0 30px 0;
 }
 .banner-main-content button a{
     color: #f3f3f3f3;
