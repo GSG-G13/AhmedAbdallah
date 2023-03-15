@@ -1,4 +1,5 @@
 // variables
+const homeLink = document.getElementById("home");
 const generallink = document.getElementById("genral");
 const businesslink = document.getElementById("business");
 const sportslink = document.getElementById("sports");
@@ -7,6 +8,9 @@ const technologylink = document.getElementById("technology");
 const healthlink = document.getElementById("health");
 const sciencelink = document.getElementById("science");
 const searchBtn = document.getElementById("searchBtn");
+const selectNewsCat = document.getElementById("selectNewsCat");
+
+
 
 const newsQuery = document.getElementById("newsQuery");
 const newsType = document.getElementById("newsType");
@@ -17,27 +21,23 @@ var newsDataArr = [];
 
 // apis 
 const API_KEY = "8309ecd71883471db0fc4a20fd3959d5";
-const headlines = "https://newsapi.org/v2/top-headlines?country=us&apiKey="+API_KEY;
-const general = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey="+API_KEY;
-const business = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey="+API_KEY;
-const sports = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey="+API_KEY;
-const entertainment = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey="+API_KEY;
-const technology = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey="+API_KEY;
-const science = "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey="+API_KEY;
-const health = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey="+API_KEY;
-
-     
 const  searchQ = "https://newsapi.org/v2/everything?q=";
 
 
 window.onload = function() {
 
-    fetchNews(headlines, "General news");
+    fetchNews("general", "Latest News");
   };
   
-  function fetchNews(url, headerTitle) {
+  function fetchNews(cat, headerTitle) {
     let xhr = new XMLHttpRequest();
-    //let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=41c1fd3b33134958b35bc4adc3c83113";
+    let url;
+    if(cat == "search"){
+     url = searchQ+encodeURIComponent(newsQuery.value)+"&apiKey="+API_KEY;
+    }else{
+     url = "https://newsapi.org/v2/top-headlines?country=us&page=1&category="+cat+"&apiKey="+API_KEY;
+    }
+    console.log(cat)
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
         let response = JSON.parse(xhr.responseText);
@@ -50,38 +50,38 @@ window.onload = function() {
     xhr.send();
   }
   
-  displayNews();
-  
+  homeLink.addEventListener("click",function(){
+    fetchNews("general", "Latest News");
+});
+
 generallink.addEventListener("click",function(){
-    fetchNews(general, "General news");
+    fetchNews("general", "General News");
 });
 
 businesslink.addEventListener("click",function(){
-    fetchNews(business, "Business");
+    fetchNews("business", "Business News");
 });
 
 sportslink.addEventListener("click",function(){
-    fetchNews(sports, "Sports");
+    fetchNews("sports", "Sports News");
 });
 
 entertainmentlink.addEventListener("click",function(){
-    fetchNews(entertainment, "Entertainment");
+    fetchNews("entertainment", "Entertainment News");
 });
 
 technologylink.addEventListener("click",function(){
-    fetchNews(technology, "Technology");
+    fetchNews("technology", "Technology News");
 });
 healthlink.addEventListener("click",function(){
-    fetchNews(health, "Technology");
+    fetchNews("health", "Technology News");
 });
 sciencelink.addEventListener("click",function(){
-    fetchNews(science, "Technology");
+    fetchNews("science", "Technology News");
 });
 
 searchBtn.addEventListener("click",function(){
-    const search = searchQ+encodeURIComponent(newsQuery.value)+"&apiKey="+API_KEY;
-    newsType.innerText="Search : "+newsQuery.value+"";
-    fetchNews(search);
+    fetchNews("search", "Search : "+newsQuery.value+"");
 });
 
 

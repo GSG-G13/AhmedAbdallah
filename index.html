@@ -40,22 +40,33 @@
                 <div class = "nav-bar" id = "nav-bar">
                     <nav>
                         <ul>
-                            <li><a href = "#">home</a></li>
-                            <li><a href = "#" id="genral">Genral</a></li>
+                            <li><a href = "#" id="home">home</a></li>
+                            <li><a href = "#" id="genral">General</a></li>
                             <li><a href = "#" id="business">Business</a></li>
                             <li><a href = "#" id="sports">Sports</a></li>
                             <li><a href = "#" id="technology">Technology</a></li>
                             <li><a href = "#" id="entertainment">Entertainment</a></li>
                             <li><a href = "#" id="health">Health</a></li>
                             <li><a href = "#" id="science">Science</a></li>
-                            <li><input id="searchBtn"></li>
                         </ul>
                     </nav>
                 </div>
 
             </div>
         </header>
-
+        <form action="">
+            <input class="form-control me-2" type="text" id="newsQuery" placeholder="Search news">  
+            <select name="" id="selectNewsCat">
+                <option value="Genral">Genral</option>
+                <option value="Business">Business</option>
+                <option value="Sports">Sports</option>
+                <option value="Technology">Technology</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Health">Health</option>
+                <option value="Science">Science</option>
+            </select>          
+            <button id="searchBtn" class="serachBtn">Search</button>
+        </form>
         <section class = "banner">
             <div class = "banner-main-content">
                 <section class = "main-container-right-cat">
